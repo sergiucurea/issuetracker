@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project Issue Tracker</title>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+</head>
+
+  <body onload="fetchIssues()" >
+  
+  
+  <div class="container">
+	
+	<h1>Project Issue Tracker<small>bySDC</small></h1> 
+	<div class="jumbotron" >
+	<h3>Add New Issue:</h3>
+		<form id="issueInputForm">
+		<div class="form-group">
+		<label for="issueTypeInput">Type</label>
+		<select id="issueTypeInput" class="form-control">
+		  <option value="Feature">Feature</option>
+		  <option value="Bug">Bug</option>
+		  <option value="Task">Task</option>
+		</select>
+		</div>
+		
+		<div class="form-group">
+		<label for="issueSprintInput">Sprint</label>
+		<select id="issueSprintInput" class="form-control">
+		  
+		</select>
+		</div>
+		
+		<div class="form-group">
+		<label for="issueNameInput">Name</label>
+		<input type="text" class="form-control" id="issueNameInput" placeholder="What is the name ...">
+		</div>
+		<div class="form-group">
+		<label for="issueDescInput">Description</label>
+		<input type="text" class="form-control" id="issueDescInput" placeholder="What is the description ...">
+		</div>
+		 <button type="submit" class="btn btn-primary">Add</button>
+		</form>
+	</div>
+	
+	<div class="jumbotron" >
+	<h3>Add New Sprint:</h3>
+	<form id="sprintInputForm">
+	<div class="form-group">
+		<label for="sprintNameInput">Name</label>
+		<input type="text" class="form-control" id="sprintNameInput" placeholder="What is the name ...">
+	</div>
+	 <button type="submit" class="btn btn-primary">Create</button>
+	</form>
+	</div>
+	
+	<div class="jumbotron" >
+	<h3>FILTER:</h3>
+	<form id="filter">
+	<div class="form-group">
+		<label for="issueTypeFilter">Type</label>
+		<select id="issueTypeFilter" class="form-control">
+		  <option selected value="www">-</option>
+		  <option value="Feature">Feature</option>
+		  <option value="Bug">Bug</option>
+		  <option value="Task">Task</option>
+		</select>
+		</div>
+		
+		<div class="form-group">
+		<label for="issueSprintFilter">Sprint</label>
+		<select id="issueSprintFilter" class="form-control">
+		  <option selected value="www">-</option>
+		</select>
+		</div>
+	 <button type="submit" class="btn btn-success">Filter</button>
+	</form>
+	</div>
+	
+	<div class="col-lg-12">
+        <div id="issuesList">
+        </div>
+	  
+	
+	</div>
+	
+
+    <script src="chance.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" ></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
